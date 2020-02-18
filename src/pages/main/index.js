@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -52,7 +53,7 @@ export default class Main extends Component {
                     <article key={ cl.id }>
                         <strong>Nome do Cliente:</strong> <span>{cl.nome}</span>
                         <p>Pais: {cl.pais.descricao}</p>
-                        <a href="">Acessar</a>
+                        <Link to={`/clients/${ cl.id }`}>Acessar</Link>
                     </article>
                 ))}
 
